@@ -20,7 +20,7 @@ type Commit struct {
 }
 
 func (c *Commit) generateBadgeItem() string {
-	return fmt.Sprintf("![img](https://img.shields.io/static/v1?label=commit&message=%s&color=brightgreen)[%s](%s)<br>", c.ShortID, c.Title, c.WebURL)
+	return fmt.Sprintf("![img](https://img.shields.io/static/v1?label=commit&message=%s&color=brightgreen)[%s](%s) %s<br>", c.ShortID, c.Title, c.WebURL,c.CommitDate)
 }
 
 func RequestCommitInfo(personalAccessToken string, endpoint string, repoID int, sinceDateString, endDateString string) ([]Commit, error) {
