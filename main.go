@@ -15,7 +15,7 @@ func main() {
 	flag.StringVar(&endDateString, "until", "", "pull commits before this date,YYYY-MM-DD")
 	flag.StringVar(&endpoint, "endpoint", "http://10.134.180.201/", "endpoint url of gitlab")
 	flag.IntVar(&repoID, "id", 11, "repository id")
-	flag.StringVar(&personalAccessToken, "token", "U4feXygUg3XJbhmLCRzb", "personal access token of your gitlab")
+	flag.StringVar(&personalAccessToken, "token", "", "personal access token of your gitlab")
 	flag.Parse()
 
 	if sinceDateString=="" && endDateString==""{
